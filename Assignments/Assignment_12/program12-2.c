@@ -1,0 +1,74 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////
+//  Function Name :  Count_factors
+//  Description :    It is used to count total factors of a number
+//  Input :          Int
+//  Output :         Int
+//  Auther :         Anjana Dagdu Gadekar
+//  Date :           24/10/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+
+int  Count_factors(int number)
+{
+
+    int i=0, iFrequency=0;
+
+    if(number<0)
+    {
+        printf("Invalid Input");
+    }
+    
+
+    for(i=1; i<=number;i++)
+    {
+        if((number % i)==0)
+        {
+            iFrequency++;
+        }
+
+    } return iFrequency;
+
+}// End of Count_factors
+
+// Time complexity: o(N)
+
+///////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+///////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int number;
+
+    printf("Enter number :\n");
+    scanf("%d", &number);
+
+    
+    printf("%d\n",Count_factors(number));
+    
+    return 0;
+}// End of main
+
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//  Testcases Succesfully handaled by the application
+//
+//     Input1 : 12      Output :  6
+//     Input1 : 24      Output :  8
+//
+///////////////////////////////////////////////////////////////////////
+
+
